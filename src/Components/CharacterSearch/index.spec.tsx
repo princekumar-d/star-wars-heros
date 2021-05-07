@@ -1,5 +1,11 @@
 import React from 'react';
-import { render, fireEvent, act, waitFor, screen } from '@testing-library/react';
+import {
+  render,
+  fireEvent,
+  act,
+  waitFor,
+  screen,
+} from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 
 import { CharacterSearch } from './index';
@@ -79,7 +85,18 @@ describe('<CharacterSearch />', () => {
     act(() => {
       fireEvent.change(input, { target: { value: 'LU' } });
     });
-    await waitFor(() => expect(screen.getByText('Luke Skywalker')).toBeInTheDocument());
-    await waitFor(() => expect(screen.getByText('Luminara Unduli')).toBeInTheDocument());
+    await waitFor(() =>
+      expect(screen.getByText('Luke Skywalker')).toBeInTheDocument()
+    );
+    await waitFor(() =>
+      expect(screen.getByText('Luminara Unduli')).toBeInTheDocument()
+    );
+  });
+  test('has form action for the search page ', async () => {
+    const { findByTestId } = render(<CharacterSearch />, {
+      wrapper: MemoryRouter,
+    });
+    const searchForm = await findByTestId('searchForm');
+    expect(searchForm).toHaveAttribute('action', '/search');
   });
 });

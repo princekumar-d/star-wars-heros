@@ -25,7 +25,7 @@ export const CharacterSearch: React.FC = () => {
   };
   return (
     <div className={style.characterSearch} data-testid="characterSearch">
-      <form action="/search" method="GET">
+      <form action="/search" method="GET" data-testid="searchForm">
         <div className={style.formWrapper}>
           <div className={style.fieldWrapper}>
             <TextBox

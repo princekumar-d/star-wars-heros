@@ -2,7 +2,7 @@ import express from 'express';
 import webpack from 'webpack';
 import webpackDevMiddleware from 'webpack-dev-middleware';
 import historyApiFallback from 'connect-history-api-fallback';
-import config from './webpack.config.js';
+import config from './webpack.config.babel.js';
 
 const PORT = process.env.PORT || 3001;
 

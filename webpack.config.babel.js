@@ -2,17 +2,17 @@ import path from 'path';
 import HtmlWebpackPlugin from 'html-webpack-plugin';
 import CleanWebpackPlugin from 'clean-webpack-plugin';
 import MiniCssExtractPlugin from 'mini-css-extract-plugin';
-const { NODE_ENV = 'production' } = process.env;
+const { NODE_ENV = "production" } = process.env;
 
 const config = {
   entry: path.resolve(__dirname, 'src', 'index.tsx'),
   output: {
     path: path.resolve(__dirname, 'dist'),
-    filename: 'js/bundle.[contenthash].js',
+    filename: 'js/bundle.js',
     //clean: true,
     publicPath: '/',
   },
-  mode: 'development',
+  mode: NODE_ENV,
   plugins: [
     //new CleanWebpackPlugin(['dist']),
     new MiniCssExtractPlugin({
