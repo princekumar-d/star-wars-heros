@@ -1,0 +1,32 @@
+.footer {
+  background-color: #000000;
+  background-image: url(https://static-mh.content.disney.io/starwars/assets/footer/vader_2-86e8fdb4e26d.jpg);
+  background-position: center top;
+  background-repeat: no-repeat;
+  text-align: center;
+  & .container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 16px;
+    padding-right: 16px;
+    max-width: 1048px;
+  }
+  & .footerLogo {
+    diplay: flex;
+    justify-content: center;
+    padding: 40px 0;
+    & img {
+      width: 100px;
+    }
+  }
+  & .footerLinks {
+    margin: 16px 0;
+    & a {
+      margin: 0 4px;
+      display: inline-block;
+      &:hover {
+        border-bottom: 1px solid #cccccc;
+      }
+    }
+  }
+}

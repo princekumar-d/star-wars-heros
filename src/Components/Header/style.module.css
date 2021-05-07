@@ -1,0 +1,19 @@
+.header {
+  background: #000;
+  & .logoWrapper {
+    display: flex;
+    justify-content: center;
+  }
+  & .mainLogo {
+    display: inline-block;
+    width: 200px;
+    margin: -32px 0;
+  }
+}
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 16px;
+  padding-right: 16px;
+  max-width: 1048px;
+}

@@ -1,0 +1,41 @@
+.characterResults {
+  & .resultIndicator {
+    color: #fff;
+    text-transform: uppercase;
+    margin: 16px 0;
+    font-size: 14px;
+  }
+  & .resultItem {
+    & a {
+      display: block;
+      padding: 16px 0;
+      border-bottom: 1px solid #3a3a3a;
+      text-transform: uppercase;
+      font-size: 18px;
+      color: #fff;
+      &:hover {
+        color: #9e4f60;
+        border-bottom: 1px solid #3a3a3a;
+      }
+    }
+    & .metaData {
+      display: block;
+      font-size: 14px;
+      color: #aaa;
+      text-transform: none;
+    }
+  }
+  & .pagination {
+    display: flex;
+    margin: 32px 0;
+    & button {
+      width: 120px;
+      min-height: 40px;
+      border-radius: 3px;
+      font-size: 16px;
+      & + button {
+        margin-left: 16px;
+      }
+    }
+  }
+}
