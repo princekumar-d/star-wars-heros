@@ -16,7 +16,7 @@ yarn start
 
 The app accessed on local by the url - http://localhost:3001/
 
-As the can be deployed as a static app.
+It can be deployed as a static app.
 Simply host the dist directory after running the command
 
 yarn install
