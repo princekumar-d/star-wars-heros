@@ -1,9 +1,8 @@
-const express = require('express');
-const webpack = require('webpack');
-const webpackDevMiddleware = require('webpack-dev-middleware');
-const historyApiFallback = require('connect-history-api-fallback');
-const config = require('./webpack.config.js');
-const router = express.Router();
+import express from 'express';
+import webpack from 'webpack';
+import webpackDevMiddleware from 'webpack-dev-middleware';
+import historyApiFallback from 'connect-history-api-fallback';
+import config from './webpack.config.js';
 
 const PORT = process.env.PORT || 3001;
 
